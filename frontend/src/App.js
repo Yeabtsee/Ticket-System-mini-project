@@ -5,7 +5,6 @@ import AuthContext from "./context/auth";
 import Login from "./components/Login";
 import UserDashboard from "./components/UserDashboard";
 import AdminDashboard from "./components/AdminDashboard";
-import Navbar from "./components/Navbar";
 
 class App extends React.Component {
   state = {

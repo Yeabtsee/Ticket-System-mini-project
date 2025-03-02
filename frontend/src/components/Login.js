@@ -22,7 +22,7 @@ class Login extends React.Component {
       password: "",
       email: "",
       confirmPassword: "",
-      role: "user", // Default role is "user"
+      role: "user", 
     };
   }
 
@@ -41,7 +41,6 @@ class Login extends React.Component {
 
     try {
       if (isSignIn) {
-        // 🔥 Login API Call
         const res = await axios.post("http://localhost:5000/api/login", {
           username,
           password,
@@ -51,7 +50,6 @@ class Login extends React.Component {
           res.data.role === "admin" ? "/admin" : "/dashboard"
         );
       } else {
-        // 🔥 Signup API Call
         if (password !== confirmPassword) {
           alert("Passwords do not match!");
           return;
@@ -63,7 +61,7 @@ class Login extends React.Component {
           role,
         });
         alert("Signup successful! Please log in.");
-        this.toggleForm(); // Switch to login form after signup
+        this.toggleForm(); 
       }
     } catch (err) {
       console.log(err);
